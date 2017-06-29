@@ -46,7 +46,7 @@ module I18n
         end
 
         def write_tree(path, tree)
-          hash = tree.to_hash(true)
+          hash = tree.to_hash(false)
           adapter = self.class.adapter_name_for_path(path)
           content = adapter_dump(hash, adapter)
           # Ignore unchanged data
